@@ -1,0 +1,175 @@
+var pr = new Promise((resolve, reject)=>{
+// Async Code
+setTimeout(()=>{
+resolve("This is the Data of TimeOut");
+},6000);
+});
+undefined
+pr;
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: "This is the Data of TimeOut"
+pr.then(data=>console.log('Data is',data)).catch(err=console.log(error is ,err));
+VM501:1 Uncaught SyntaxError: missing ) after argument list
+pr.then(data=>console.log('Data is',data)).catch(err=>console.log(error is ,err));
+VM530:1 Uncaught SyntaxError: missing ) after argument list
+pr.then(data=>console.log('Data is',data)).catch(err=>console.log("error is" ,err));
+VM548:1 Data is This is the Data of TimeOut
+Promise {<resolved>: undefined}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+async function getPizza(){
+    console.log("Pizza first line call");
+var pr = new Promise((resolve, reject)=>{
+// Async code
+console.log("Going to call timeout");
+setTimeout(()=>{
+console.log("After 6 sec"):
+resolve("Pizza is ready");
+},6000);
+});
+console.log("Pizza last line call");
+return pr;
+}
+
+VM1160:7 Uncaught SyntaxError: Unexpected token :
+async function getPizza(){
+    console.log("Pizza first line call");
+var pr = new Promise((resolve, reject)=>{
+// Async code
+console.log("Going to call timeout");
+setTimeout(()=>{
+console.log("After 6 sec");
+resolve("Pizza is ready");
+},6000);
+});
+console.log("Pizza last line call");
+return pr;
+}
+
+undefined
+pr;
+Promise {<resolved>: "This is the Data of TimeOut"}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: "This is the Data of TimeOut"
+var promise = getPizza();
+console.log("Promise is ",promise);
+promise.then(data=>console.log('Rec Pizza ',data)).catch(err=>console.log("Pizza Rejected is ",err));
+VM1165:2 Pizza first line call
+VM1165:5 Going to call timeout
+VM1165:11 Pizza last line call
+VM1184:2 Promise is  Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: "Pizza is ready"
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM1165:7 After 6 sec
+VM1184:3 Rec Pizza  Pizza is ready
+async function getPizza(){
+console.log("Pizza First Line Call ");
+var pr = new Promise((resolve, reject)=>{
+// Async Code
+console.log("going to call timeout ");
+setTimeout(()=>{
+console.log("After 6 Sec ");
+resolve("Pizza is Ready");
+},6000);
+});
+console.log("Pizza Last Line Call ");
+return pr;
+}
+undefined
+var promise = getPizza();
+console.log("Promise is ",promise);
+promise.then(data=>console.log('Rec Pizza ',data)).catch(err=>console.log("Pizza Rejected is ",err));
+VM1190:2 Pizza First Line Call 
+VM1190:5 going to call timeout 
+VM1190:11 Pizza Last Line Call 
+VM1196:2 Promise is  Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "pending"[[PromiseValue]]: undefined
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM1190:7 After 6 Sec 
+VM1196:3 Rec Pizza  Pizza is Ready
+var x = "Hello";
+undefined
+x.toUpperCase().charAt(1);
+"E"
+class A{
+    show(){
+console.log("A show");
+return this;
+    }
+disp(){
+console.log("Disp");
+return this;
+}
+output(){
+console.log("Output");
+}
+}
+undefined
+var a = new A();
+undefined
+a;
+A {}__proto__: Object
+a.show().disp().output();
+VM1627:3 A show
+VM1627:7 Disp
+VM1627:11 Output
+undefined
+var pr1 = getPizza;
+var p2 = getPizza;
+var p2 = getPizza;
+Promise.all([pr1,pr2,pr3]).then(dataArr=>console.log("Data is ",dataArr)).catch(err=>console.log('Error is ',err));
+VM1832:4 Uncaught ReferenceError: pr2 is not defined
+    at <anonymous>:4:18
+(anonymous) @ VM1832:4
+var pr1 = getPizza;
+var pr2 = getPizza;
+var pr3 = getPizza;
+Promise.all([pr1,pr2,pr3]).then(dataArr=>console.log("Data is ",dataArr)).catch(err=>console.log('Error is ',err));
+VM1839:4 Data is  (3) [ƒ, ƒ, ƒ]0: async ƒ getPizza()1: async ƒ getPizza()2: async ƒ getPizza()length: 3__proto__: Array(0)
+Promise {<resolved>: undefined}__proto__: Promisecatch: ƒ catch()constructor: ƒ Promise()finally: ƒ finally()then: ƒ then()Symbol(Symbol.toStringTag): "Promise"__proto__: Object[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+typeof promise;
+"object"
+var pr1 = getPizza();
+var pr2 = getPizza();
+var pr3 = getPizza();
+Promise.all([pr1,pr2,pr3]).then(dataArr=>console.log("Data is ",dataArr)).catch(err=>console.log('Error is ',err));
+VM1190:2 Pizza First Line Call 
+VM1190:5 going to call timeout 
+VM1190:11 Pizza Last Line Call 
+VM1190:2 Pizza First Line Call 
+VM1190:5 going to call timeout 
+VM1190:11 Pizza Last Line Call 
+VM1190:2 Pizza First Line Call 
+VM1190:5 going to call timeout 
+VM1190:11 Pizza Last Line Call 
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM1190:7 After 6 Sec 
+VM1190:7 After 6 Sec 
+VM1190:7 After 6 Sec 
+VM1894:4 Data is  (3) ["Pizza is Ready", "Pizza is Ready", "Pizza is Ready"]0: "Pizza is Ready"1: "Pizza is Ready"2: "Pizza is Ready"length: 3__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+typeof pr1;
+"object"
+async function cube(num){
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+resolve(num**3);
+},6000);
+});
+return pr;
+}
+undefined
+pr;
+Promise {<resolved>: "This is the Data of TimeOut"}
+async function cube(num){
+console.log("Cube Call with ",num);
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+resolve(num**3);
+},6000);
+});
+return pr;
+}
+undefined
+async function total(){
+return await cube(3) + await cube(4) + await cube(5);
+}
+undefined
+total().then(data=>console.log('total is ',data)).catch(err=>console.log('Error is ',err));
+VM2033:2 Cube Call with  3
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM2033:2 Cube Call with  4
+VM2033:2 Cube Call with  5
+VM2044:1 total is  216
